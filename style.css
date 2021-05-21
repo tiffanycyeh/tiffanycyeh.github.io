@@ -1,0 +1,438 @@
+html,
+body,
+.cover{
+    height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Asul, sans-serif;
+}
+
+p {
+    font-family: Chivo, sans-serif;
+}
+
+
+/*
+===============
+NAVBAR
+===============
+*/
+
+.navbar-fixed-top {
+    min-height: 90px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 30px;
+    padding-left: 30px;
+    line-height: 90px;
+    font-family: Chivo, sans-serif;
+    font-size: 15px;
+    transition: background-color 0.30s ease-in-out, color 0.30s ease-in-out;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #391867;    
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    color: #fff;
+    background-color: #2d1352;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #2d1352;
+}
+
+.navbar-toggle {
+    margin-top: 18px;
+    padding: 20px;
+}
+
+/*
+===============
+COVER
+===============
+*/
+
+.cover {
+    background: url('https://static.pexels.com/photos/162605/notebook-natural-laptop-macbook-162605.jpeg') top center no-repeat;
+    background-size: cover;
+    
+    /* To vertically align the text */
+    display: table;
+    width: 100%;
+    padding: 0 15%;
+    box-shadow: inset 0 0 100px #000;
+}
+
+.cover-text {
+    color: white;
+    
+    /* To vertically align the text */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cover-text h1 {
+    margin: 0;
+    font-size: 80px;
+    letter-spacing: -3px;
+}
+
+.cover-text p {
+    margin: 0;
+    font-size: 30px;
+}
+
+.cover .btn {
+    margin-top: 30px;
+}
+
+
+/*
+===============
+GENERAL STYLES
+===============
+*/
+
+section {
+    padding: 40px 20px;
+    padding-bottom: 90px;
+}
+
+section h1 {
+    font-size: 50px;
+    color: #391867;
+    margin-top: 50px;
+}
+
+.btn {
+    font-family: Chivo, sans-serif;
+    background-color: #745d94;
+    color: white;
+    border: none;
+    transition: box-shadow 0.20s ease-in-out; 
+
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 10px #000;
+    color: white;
+}
+
+.btn:active {
+    background-color: #745d94;    
+    color: white;
+    box-shadow: none;
+}
+
+.btn:focus {
+    color: white;
+}
+
+.btn-lg {
+    border-radius: 0;
+    padding: 15px 100px;
+}
+
+/*
+===============
+ABOUT ME
+===============
+*/
+
+.img-skills {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.img-skills img {
+    margin: 10px;
+}
+
+/*
+===============
+PORTFOLIO
+===============
+*/
+
+.dark-background {
+    background-color: #14131C;
+}
+
+.dark-background h1 {
+    color: #afa2c2;
+}
+
+.nav-pills {
+    padding-top: 20px;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.nav-pills>li>a:hover {
+    background-color: #9d8db4;    
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus {
+    border-radius: 0;
+    background-color: #745d94;
+    border: none;
+}
+
+.nav-pills>li.active>a:hover {
+    background-color: #5c4a76;
+}
+
+.tab-content .row {
+    padding: 40px;
+    color: white;
+}
+
+.thumbnail {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-thumbnail:hover {
+  background-color: #5c4a76;;
+}
+
+#translation p, #webdev p,
+#translation h3, #webdev h3 {
+    text-align: center;
+    color: white;    
+}
+
+#translation h3 + p, #webdev p {
+    margin-bottom: 30px;
+}
+
+#translation>p {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+/*
+===============
+CONTACT
+===============
+*/
+
+.form-group {
+    position: relative;
+}
+
+.form-control {
+    margin-top: 30px;
+    font-family: Chivo, sans-serif;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 1px #CCC;
+    box-shadow: none;
+    transition: none;    
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+label, input:placeholder-shown ~ label,
+textarea:placeholder-shown ~ label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Chivo, sans-serif;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    z-index:1;
+}
+
+input:focus ~ label, 
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 20px;  
+    color: #391867;
+    font-family: Chivo, sans-serif;
+}
+
+.bar {
+    position: relative;
+    display: block; width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #391867;
+    transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+input:focus ~ .bar:before, 
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before, 
+textarea:focus ~ .bar:after{
+    width: 50%;
+}
+
+.entranceContactRight {
+    padding-top: 130px;
+    padding-left: 30px;
+}
+
+#contact h2 {
+    margin-top: 0;
+    font-size: 35px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+/* 
+=================
+FOOTER
+=================
+*/
+
+footer p {
+    color: white;
+    font-size: 15px;
+    padding: 40px 0;
+}
+
+footer img {
+    margin: 20px 0;
+}
+
+/* 
+=================
+MEDIA QUERIES 
+=================
+*/
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width : 568px) {
+    
+    .cover h1 {
+        font-size: 50px;
+    }
+    
+    .cover-text p{
+        font-size: 25px;
+    }
+    
+    .btn {
+        border-radius: 0;
+        display: block;
+    }
+    
+    .img-skills {
+        padding: 10px;
+    }
+  
+  .img-skills img {
+    height:100px;
+  }
+    
+}
+
+@media only screen and (max-width : 991px) {
+    
+    .img-skills {
+        padding: 10px;
+    }
+    
+    section .lead {
+        font-size: 18px;
+    }
+    
+    section h1, section p, section h2 {
+        text-align: center;
+    }
+    
+    #contact h2 {
+        margin-top: 20px;;
+        font-size: 35px;
+    }
+    
+    footer p {
+        text-align: center;
+        padding: 20px 0;
+        margin: 0;
+    }
+    
+    footer img {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .img-center {
+        text-align: center;
+    }
+  
+    .entranceContactRight {
+      padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width : 380px) {
+    .navbar-brand img {
+      height: 40px;
+      margin-top: 10px;
+    }
+  
+    .cover h1 {
+        font-size: 35px;
+    }
+    
+    .cover-text p{
+        font-size: 18px;
+    }
+    
+    .btn-lg {
+        border-radius: 0;
+        padding: 15px 60px;
+    }
+}
+  
