@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>Tiffany Yeh's Design Portfolio</title>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">.
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+  
+<style>
+html,
+body,
+.cover{
+    height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Secular One', sans-serif;
+}
+
+p {
+    font-family: 'Secular One', sans-serif;
+}
+
+
+/*
+===============
+NAVBAR
+===============
+*/
+
+.navbar-fixed-top {
+    min-height: 90px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 30px;
+    padding-left: 30px;
+    line-height: 90px;
+    font-family: Chivo, sans-serif;
+    font-size: 15px;
+    transition: background-color 0.30s ease-in-out, color 0.30s ease-in-out;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #36276e;    
+}
+
+.navbar-inverse .navbar-nav>li>a:active {
+    color: #fff;
+    background-color: #2d1352;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #2d1352;
+}
+
+.navbar-toggle {
+    margin-top: 18px;
+    padding: 20px;
+}
+
+/*
+===============
+COVER
+===============
+*/
+
+.cover {
+    background: url('https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1093&q=80') top center no-repeat;
+    background-size: cover;
+    
+    /* To vertically align the text */
+    display: table;
+    width: 100%;
+    padding: 0 15%;
+    box-shadow: inset 0 0 100px #000;
+}
+
+.cover-text {
+    color: white;
+    
+    /* To vertically align the text */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cover-text h1 {
+    margin: 0;
+    font-size: 90px;
+    letter-spacing: -3px;
+}
+
+.cover-text p {
+    margin: 0;
+    font-size: 40px;
+}
+
+.cover .btn {
+    margin-top: 30px;
+}
+
+
+/*
+===============
+GENERAL STYLES
+===============
+*/
+
+section {
+    padding: 40px 20px;
+    padding-bottom: 90px;
+}
+
+section h1 {
+    font-size: 50px;
+    color: #36276e;
+    margin-top: 50px;
+}
+
+.btn {
+    font-family: Chivo, sans-serif;
+    background-color: #745d94;
+    color: white;
+    border: none;
+    transition: box-shadow 0.20s ease-in-out; 
+
+}
+
+.btn:hover {
+    box-shadow: 2px 2px 10px #000;
+    color: white;
+}
+
+.btn:active {
+    background-color: #745d94;    
+    color: white;
+    box-shadow: none;
+}
+
+.btn:focus {
+    color: white;
+}
+
+.btn-lg {
+    border-radius: 0;
+    padding: 15px 100px;
+}
+
+/*
+===============
+ABOUT ME
+===============
+*/
+
+.img-skills {
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.img-skills img {
+    margin: 10px;
+}
+
+/*
+===============
+PORTFOLIO
+===============
+*/
+
+.dark-background {
+    background-color: #14131C;
+}
+
+.dark-background h1 {
+    color: #afa2c2;
+}
+
+.nav-pills {
+    padding-top: 20px;
+}
+
+.nav-pills>li>a {
+    border-radius: 0;
+    color: white;
+    font-size: 15px;
+}
+
+.nav-pills>li>a:hover {
+    background-color: #9d8db4;    
+}
+
+.nav-pills>li.active>a, 
+.nav-pills>li.active>a:focus {
+    border-radius: 0;
+    background-color: #745d94;
+    border: none;
+}
+
+.nav-pills>li.active>a:hover {
+    background-color: #5c4a76;
+}
+
+.tab-content .row {
+    padding: 40px;
+    color: white;
+}
+
+.thumbnail {
+  background-color: transparent;
+  border: none;
+}
+
+.btn-thumbnail:hover {
+  background-color: #5c4a76;;
+}
+
+#otherstuff p, #webdev p,
+#otherstuff h3, #webdev h3 {
+    text-align: center;
+    color: white;    
+}
+
+#otherstuff h3 + p, #webdev p {
+    margin-bottom: 30px;
+}
+
+#otherstuff>p {
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+
+/*
+===============
+CONTACT
+===============
+*/
+
+.form-group {
+    position: relative;
+}
+
+.form-control {
+    margin-top: 30px;
+    font-family: Chivo, sans-serif;
+    border-radius: 0;
+    border: none;
+    border-bottom: solid 1px #CCC;
+    box-shadow: none;
+    transition: none;    
+}
+
+.form-control:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+label, input:placeholder-shown ~ label,
+textarea:placeholder-shown ~ label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: Chivo, sans-serif;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    z-index:1;
+}
+
+input:focus ~ label, 
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 20px;  
+    color: #391867;
+    font-family: Chivo, sans-serif;
+}
+
+.bar {
+    position: relative;
+    display: block; width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #391867;
+    transition: 0.2s ease all;
+}
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+input:focus ~ .bar:before, 
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before, 
+textarea:focus ~ .bar:after{
+    width: 50%;
+}
+
+.entranceContactRight {
+    padding-top: 130px;
+    padding-left: 30px;
+}
+
+#contact h2 {
+    margin-top: 0;
+    font-size: 35px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+/* 
+=================
+FOOTER
+=================
+*/
+
+footer p {
+    color: white;
+    font-size: 15px;
+    padding: 40px 0;
+}
+
+footer img {
+    margin: 20px 0;
+}
+
+/* 
+=================
+MEDIA QUERIES 
+=================
+*/
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width : 568px) {
+    
+    .cover h1 {
+        font-size: 50px;
+    }
+    
+    .cover-text p{
+        font-size: 25px;
+    }
+    
+    .btn {
+        border-radius: 0;
+        display: block;
+    }
+    
+    .img-skills {
+        padding: 10px;
+    }
+  
+  .img-skills img {
+    height:100px;
+  }
+    
+}
+
+@media only screen and (max-width : 991px) {
+    
+    .img-skills {
+        padding: 10px;
+    }
+    
+    section .lead {
+        font-size: 18px;
+    }
+    
+    section h1, section p, section h2 {
+        text-align: center;
+    }
+    
+    #contact h2 {
+        margin-top: 20px;;
+        font-size: 35px;
+    }
+    
+    footer p {
+        text-align: center;
+        padding: 20px 0;
+        margin: 0;
+    }
+    
+    footer img {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    .img-center {
+        text-align: center;
+    }
+  
+    .entranceContactRight {
+      padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width : 380px) {
+    .navbar-brand img {
+      height: 40px;
+      margin-top: 10px;
+    }
+  
+    .cover h1 {
+        font-size: 35px;
+    }
+    
+    .cover-text p{
+        font-size: 18px;
+    }
+    
+    .btn-lg {
+        border-radius: 0;
+        padding: 15px 60px;
+    }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <body data-spy="scroll" data-target="#navbar" data-offset="90"> 
+
+      <nav class="navbar navbar-fixed-top navbar-inverse" id="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#welcome-section"><img src="#" class="img-responsive" alt=""></a>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#welcome-section">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Portfolio</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </div>            
+            </div>        
+        </nav>
+        
+        <div class="cover" id="welcome-section">
+            <div class="cover-text text-left">
+                <div class="animated fadeInUp">
+                    <h1>Tiffany Yeh</h1>
+                    <p class="lead">Product Designer at Ford Motor Company</p>
+                    <a href="#portfolio" role="button" class="btn btn-lg">My Portfolio</a>
+                </div>
+            </div>
+        </div>
+        
+        <section id="about">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-8 entranceLeft">
+                        <h1>About me</h1>
+                        <p class="lead">Hello! I am currently a Product Designer for the Dealer Connectivity Data Services team at Ford Motor Company. I aspire to create and contribute to designing intuitive, efficient, and data-driven products that will inspire others to work smarter and faster in the information era that we live in today.</p> 
+
+                        <p class="lead">I have always been fascinated with technology as well as art. Since I was young, I have always desired to be involved in anything that would allow my creativity and vision to thrive, while tackling complex technical challenges. I find passion in utilizing data-driven technology, and finding opportunities for efficient yet artistic solutions.
+                            Always striving to learn new things, I graduated in 2016 from the School of Informatics & Computing from Indiana University Bloomington in 2016 and have been aiming to diversify and amplify my career within Ford IT ever since. In my free time during the 2020 pandemic, I enrolled in Northwestern the Data Science & Visualization Boot Camp, and am excited to implement my newfound knowledge into business practice.
+                        </p>
+
+                        <p class="lead">Please feel free to browse some of the work I have done in my career so far:</p>
+                    </div>
+                    <div class="col-md-4 entranceRight">
+                        <div class="row">
+                            <div>
+                                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQGB3ftncGuUDA/profile-displayphoto-shrink_800_800/0/1579055186896?e=1627516800&v=beta&t=hgwCm9269dEFk3b8Uz5qv0BJSVjB6if-rOYyV4yoMSE" height="300px">
+                            </div>
+                            <div class="col-md-6 text-center img-skills">
+                                <img src="https://cdn.worldvectorlogo.com/logos/html5.svg" height="100px">
+                                <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg" height="100px">
+                                <img src="https://pbs.twimg.com/profile_images/741185730794409985/WXF6SZTz.jpg" height="100px">
+                            </div>
+                            <div class="col-md-6 text-center img-skills">
+                                <img src="https://sybyl.com/wp-content/uploads/2019/11/Tableau-Logo-for-website.jpg" height="100px">
+                                <img src="https://cdn.worldvectorlogo.com/logos/adobe-photoshop-cs6.svg" height="100px">
+                                <img src="https://i.dlpng.com/static/png/480649_preview.png" height="100px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="dark-background" id="projects">
+            <div class="container entranceUp">
+                <h1>My Portfolio</h1>
+                
+                <ul class="nav nav-pills" role="tablist">
+                    <li class="active"><a href="#webdev" role="tab" data-toggle="tab">Projects</a></li>
+                    
+                </ul>
+                
+                <!-- Tab panels -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane fade in active" id="webdev">
+                        <div class="row">
+                          <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://lh3.googleusercontent.com/dLssZoQds7OSJuR98V1M3kjjiNJ0xl5-W0B-88MdT3zUUSv7ImzDmx8BM8phBdrSMcabaEd5fLTldyliQa_bTkHaXU2ixMsE8BI3uTyMh0-0RsSF8508nt-aftoNSsYXLvJkqndsVVdbtCByQwR-MPElOOfMaX3t-cezg2__1FLjbLkc3SE02puAaibtm_YJqiXHRO85ctECvlZ-uPsZJjurWBqwFVMRLCSxop9SNACozfsljrdgLFIeLpKrPSMDLvvWz0J6LEZkiupcsyR2taBRODD6cx7gzOrURhY6QtIBZe3t4jnADnOwKD7pdCvceLAnCYVzqWGbdgH7rZ7wQcDKcFrK_MsERr2vAxUQOicHAdLGJiWPRuEXp7_nNKd4qFqE3sz06GxHU2w3RN_FILp1MeXrn9kq0hdjdju7d5vm1jjQt6BR0tL8YJl5_NUi9g9kMkm_k8DgGrHH70OwbXXc9oc8oqOTh5ZSvHFvxD1gS5sbuCcR9CH477LlAqLT10QOnsjgwIxYIflTBrl-ph9V_4-H52KNmpKBtTEMWsGe7aujegOr_KO17MiKCO4CgsslkRHjgPu3phzv-Q44nk_H8VydHwvWkI3nLiICPqhVXQjFh-5l9gE1D0oDBPjHy9Gl0b7bzuHTJGCdZthamxkU3_YYumF-12bzLQxXhrnGQs8SuD0p1aCOMFTf77EIE5N4Q-bAKD9pxBfFw-P89ItCbw=w1350-h907-no?authuser=0" class="img-responsive">
+                            <div class="caption">
+                              <h3>Qmote - Technical Marketing Analyst</h3>
+                              <p>●	Managed and provided customer support to their Kickstarter page for over 5000 backers, and created marketing materials (promotional photos, manuals, kickstarter updates) to boost visibility and product appeal</p>
+                              <p><a href="https://www.kickstarter.com/projects/myqblinks/qmote-the-water-resistant-internet-remote-for-smar" class="btn btn-thumbnail" role="button" target="_blank">Visit Site</a>
+                            </div>
+                          </div>
+                          
+                          <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://images.unsplash.com/photo-1589981941324-27c29919de98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80" class="img-responsive">
+                            <div class="caption">
+                              <h3>DCDS Utilities</h3>
+                              <p>Dealer Connectivity Data Services internal-facing utility screens that includes access and a UI to perform several tasks through different apps to process XMLs, SQL data, and more.</p>
+                              <p><a href="https://drive.google.com/file/d/1QfnJiuPdCG5SPtD4UcY2GTP4e1yTudCm/view?usp=sharing" class="btn btn-thumbnail" role="button" target="_blank">Visit site</a>
+                            </div>
+                          </div>
+                          
+                          <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" class="img-responsive">
+                            <div class="caption">
+                              <h3>STEM Initiative</h3>
+                              <p>My team and I won first place with out Business Proposal to promote STEM to future prospective employees at Textron Inc.</p>
+                              <p><a href="https://drive.google.com/drive/folders/0B4mhWWIWwyRuflRuZV91cW5oNmtQMExCX0pIWjY1bVUwaXYwb3hpbDdqWGlLaWVnUHVlRE0?usp=sharing" class="btn btn-thumbnail" role="button" target="_blank">Visit site</a>
+                            </div>
+                          </div>
+                        </div> <!-- .row -->
+                      
+                        <div class="row">
+                        
+                        <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" class="img-responsive">
+                            <div class="caption">
+                                <h3>STEM Initiative</h3>
+                                <p>My team and I won first place with out Business Proposal to promote STEM to future prospective employees at Textron Inc.</p>
+                                <p><a href="https://drive.google.com/drive/folders/0B4mhWWIWwyRuflRuZV91cW5oNmtQMExCX0pIWjY1bVUwaXYwb3hpbDdqWGlLaWVnUHVlRE0?usp=sharing" class="btn btn-thumbnail" role="button" target="_blank">Visit site</a>
+                            </div>
+                            </div>
+                            
+                          <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://images.unsplash.com/photo-1472070153210-15e27d938957?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="img-responsive">
+                            <div class="caption">
+                              <h3>"Red Light and Speed Cam Violation Data</h3>
+                              <p>Data Science and Analysis on Chicago traffic data</p>
+                              <p><a href="https://docs.google.com/presentation/d/1rTzAVDwcm4JGL220trKWXW-eEPd9HFdMuUb6ivT-ucU/edit?usp=sharing" class="btn btn-thumbnail" role="button" target="_blank">Visit site</a>
+                            </div>
+                          </div>
+                          
+                          <div class="thumbnail hvr-bob col-md-4">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" class="img-responsive">
+                            <div class="caption">
+                              <h3>Kappa Gamma Delta Designs</h3>
+                              <p>A showcase of the designs I have created using Adobe Photoshop, as well as some work I did as Marketing Chair of Kappa Gamma Delta.</p>
+                              <p><a href="https://docs.google.com/presentation/d/1XbXs-BGFLCymY-NeE9fM_5wTLG_Yi9_qYXLrA9OuxuA/edit?usp=sharing" class="btn btn-thumbnail" role="button" target="_blank">Visit site</a>
+                            </div>
+                          </div>
+                          
+
+                          </div>
+                        </div> <!-- .row -->
+                    </div> <!-- #projects -->
+                </div> <!-- .tab-content -->                
+            </div> <!-- .container -->
+        </section>
+        
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-7 entranceContactRightt">
+                        <h1>Résumé & Contact Info</h1>
+                    </div>     
+                        <p>Email Address: tiffanycyeh29@gmail.com
+                        <br>
+                        <a href="../tiffanycyeh.github.io/resume/TIFFANY_YEH_Resume.docx" download="TIFFANY_YEH_Resume">Download Resume in Word format</a>
+                        <br>
+                        <a href="../tiffanycyeh.github.io/resume/TIFFANY_YEH_Resume.pdf" download="TIFFANY_YEH_Resume">Download Resume in PDF format</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="dark-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Please check out my LinkedIn profile for more references.</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <div class="img-center row">
+                          <div class="col-xs-3">
+                            <a href="https://www.linkedin.com/in/tiffanycyeh/" target="_blank"><img src="https://www.pinclipart.com/picdir/big/119-1198440_linkedin-logo-and-link-to-tpd-page-linked.png" class="hvr-shrink img-responsive"></a>
+                          </div>
+                          <div class="col-xs-3">
+                            <a href="https://github.com/tiffanycyeh" target="_blank" id="profile-link"><img src="http://www.toca-ch.com/data/walls/315/35437323.png" class="hvr-shrink img-responsive"></a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+  </body>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js'></script>
+      <script id="rendered-js" >
+$(function () {
+
+
+
+  // NAVBAR MENU COLLAPSE AFTER CLICKING AN OPTION ON SMALL SCREENS
+  $('.navbar-collapse ul li a').click(function () {
+    $(".navbar-collapse").collapse('hide');
+  });
+
+  //ENTRANCE ON SCROLL ANIMATION 
+  $(".entranceRight").css('opacity', 0);
+
+  $(".entranceRight").waypoint(function () {
+    $(".entranceRight").addClass('animated fadeInRight');
+  }, { offset: '50%' });
+
+  $(".entranceLeft").css('opacity', 0);
+
+  $(".entranceLeft").waypoint(function () {
+    $(".entranceLeft").addClass('animated fadeInLeft');
+  }, { offset: '50%' });
+
+  $(".entranceUp").css('opacity', 0);
+
+  $(".entranceUp").waypoint(function () {
+    $(".entranceUp").addClass('animated fadeInUp');
+  }, { offset: '50%' });
+
+  $(".entranceContactLeft").css('opacity', 0);
+
+  $(".entranceContactLeft").waypoint(function () {
+    $(".entranceContactLeft").addClass('animated fadeInLeft');
+  }, { offset: '50%' });
+
+  $(".entranceContactRight").css('opacity', 0);
+
+  $(".entranceContactRight").waypoint(function () {
+    $(".entranceContactRight").addClass('animated fadeInRight');
+  }, { offset: '50%' });
+
+});
+
+    </script>
+
+  
+
+</body>
+
+</html>
